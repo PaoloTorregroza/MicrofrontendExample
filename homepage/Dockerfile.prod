@@ -1,5 +1,5 @@
 # Setup env
-FROM node
+FROM node:latest AS build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
