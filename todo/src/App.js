@@ -55,9 +55,7 @@ function App() {
 
 function Todo({ todo, index, markTodo, removeTodo }) {
   return (
-    <div
-      className="todo"
-    >
+    <div className="todo">
       <span style={{ textDecoration: todo.isDone ? "line-through" : "" }}>{todo.text}</span>
       <div>
         <Button variant="outline-success" onClick={() => markTodo(index)}>✓</Button>{' '}
