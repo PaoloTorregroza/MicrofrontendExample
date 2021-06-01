@@ -3,17 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-window.renderTodo = (containerId) => {
+//@ts-ignore
+window.renderHomepage = (containerId) => {
   ReactDOM.render(
     <App />,
     document.getElementById(containerId)
   );
 }
 
-window.unmountTodo = containerId => {
+//@ts-ignore
+window.unmountHomepage = containerId => {
+  //@ts-ignore
   ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
 }
 
-if (!document.getElementById('Todo-container')) {
+if (!document.getElementById('Homepage-container')) {
   ReactDOM.render(<App />, document.getElementById('root'));
 }
